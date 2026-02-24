@@ -23,27 +23,27 @@ jobs:
           # Define architectures you support
           ARCHS=("amd64" "armhf" "arm64" "riscv64")
           
-          mkdir -p apt/pool/main
-          mv incoming/*.deb apt/pool/main/ || true
+          mkdir -p docs/pool/main
+          mv incoming/*.deb docs/pool/main/ || true
 
           for ARCH in "${ARCHS[@]}"; do
-            mkdir -p apt/dists/stable/main/binary-$ARCH
+            mkdir -p docs/dists/stable/main/binary-$ARCH
             # Scan only for the specific architecture
-            apt-ftparchive --arch $ARCH packages apt/pool/main > apt/dists/stable/main/binary-$ARCH/Packages
-            gzip -9fk apt/dists/stable/main/binary-$ARCH/Packages
+            apt-ftparchive --arch $ARCH packages docs/pool/main > docs/dists/stable/main/binary-$ARCH/Packages
+            gzip -9fk docs/dists/stable/main/binary-$ARCH/Packages
           done
 
           # Generate Release metadata
-          apt-ftparchive release apt/dists/stable > apt/dists/stable/Release
+          apt-ftparchive release docs/dists/stable > docs/dists/stable/Release
           
           # Sign the repo
-          gpg --yes --clearsign -o apt/dists/stable/InRelease apt/dists/stable/Release
-          gpg --yes -abs -o apt/dists/stable/Release.gpg apt/dists/stable/Release
+          gpg --yes --clearsign -o docs/dists/stable/InRelease docs/dists/stable/Release
+          gpg --yes -abs -o docs/dists/stable/Release.gpg docs/dists/stable/Release
 
       - name: Commit and Push
         run: |
           git config user.name "Atsign Robot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add apt/.
+          git add docs/.
           git commit -m "Update repository metadata - gha${{github.run_number}}"
           git push origin trunk
