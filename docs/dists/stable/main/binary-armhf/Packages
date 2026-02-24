@@ -7,7 +7,7 @@ Maintainer: Chris Swan <chris@atsign.com>
 Installed-Size: 77512
 Provides: noports
 Depends: libc6
-Filename: apt/pool/main/noports_5.14.7_armhf.deb
+Filename: docs/pool/main/noports_5.14.7_armhf.deb
 Size: 36224814
 MD5sum: dc361bf0dada10c2ab61d9623d860249
 SHA1: ddfb4cc82b54bef42d8a63eab922aa3bf36396ff
