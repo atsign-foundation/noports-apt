@@ -19,26 +19,27 @@ jobs:
           rm private.key
 
       - name: Rebuild APT Structure
+        working-directory: ./docs
         run: |
           # Define architectures you support
           ARCHS=("amd64" "armhf" "arm64" "riscv64")
           
-          mkdir -p docs/pool/main
-          mv incoming/*.deb docs/pool/main/ || true
+          mkdir -p pool/main
+          mv incoming/*.deb pool/main/ || true
 
           for ARCH in "${ARCHS[@]}"; do
-            mkdir -p docs/dists/stable/main/binary-$ARCH
+            mkdir -p dists/stable/main/binary-$ARCH
             # Scan only for the specific architecture
-            apt-ftparchive --arch $ARCH packages docs/pool/main > docs/dists/stable/main/binary-$ARCH/Packages
-            gzip -9fk docs/dists/stable/main/binary-$ARCH/Packages
+            apt-ftparchive --arch $ARCH packages pool/main > dists/stable/main/binary-$ARCH/Packages
+            gzip -9fk dists/stable/main/binary-$ARCH/Packages
           done
 
           # Generate Release metadata
-          apt-ftparchive release docs/dists/stable > docs/dists/stable/Release
+          apt-ftparchive release dists/stable > dists/stable/Release
           
           # Sign the repo
-          gpg --yes --clearsign -o docs/dists/stable/InRelease docs/dists/stable/Release
-          gpg --yes -abs -o docs/dists/stable/Release.gpg docs/dists/stable/Release
+          gpg --yes --clearsign -o dists/stable/InRelease dists/stable/Release
+          gpg --yes -abs -o dists/stable/Release.gpg dists/stable/Release
 
       - name: Commit and Push
         run: |
