@@ -25,7 +25,7 @@ jobs:
           ARCHS=("amd64" "armhf" "arm64" "riscv64")
           
           mkdir -p pool/main
-          mv incoming/*.deb pool/main/ || true
+          mv ../incoming/*.deb pool/main/ || true
 
           for ARCH in "${ARCHS[@]}"; do
             mkdir -p dists/stable/main/binary-$ARCH
@@ -35,7 +35,7 @@ jobs:
           done
 
           # Generate Release metadata
-          apt-ftparchive release dists/stable > dists/stable/Release
+          apt-ftparchive -c ../apt-release.conf release dists/stable > dists/stable/Release
           
           # Sign the repo
           gpg --yes --clearsign -o dists/stable/InRelease dists/stable/Release
