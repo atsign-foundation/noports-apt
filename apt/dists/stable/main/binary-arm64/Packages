@@ -1,0 +1,19 @@
+Package: noports
+Architecture: arm64
+Version: 5.14.7
+Priority: optional
+Section: net
+Maintainer: Chris Swan <chris@atsign.com>
+Installed-Size: 90672
+Provides: noports
+Depends: libc6
+Filename: apt/pool/main/noports_5.14.7_arm64.deb
+Size: 37582450
+MD5sum: 0ffcdd4170798c46c923050389e011d0
+SHA1: ae9fe9f70e3b9549788b4649d8eb67e855ac61c7
+SHA256: 0fc1893454c278d9d815cf3331ace0d4b7be80422824c2034b1c62a40d580136
+SHA512: 2e7c8ba93e0ffb972d88fef789a70127f99d97cead067be64a5cbd835b531950a3117f31d9f1caf5e6ee2e19afbe8cf20c55ad43cd536679d88625715059d4ee
+Homepage: http://noports.com
+Description: Connect to any device with no external
+ listening ports open
+
