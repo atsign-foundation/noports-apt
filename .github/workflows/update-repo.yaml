@@ -1,0 +1,48 @@
+name: Update APT Metadata
+on:
+  push:
+    paths:
+      - 'incoming/**'
+
+jobs:
+  rebuild-repo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          fetch-depth: 0
+
+      - name: Setup GPG
+        run: |
+          echo "${{ secrets.GPG_PRIVATE_KEY }}" | base64 -d > private.key
+          gpg --import private.key
+
+      - name: Rebuild APT Structure
+        run: |
+          # Define architectures you support
+          ARCHS=("amd64" "armhf" "arm64" "riscv64")
+          
+          mkdir -p apt/pool/main
+          mv incoming/*.deb apt/pool/main/ || true
+
+          for ARCH in "${ARCHS[@]}"; do
+            mkdir -p apt/dists/stable/main/binary-$ARCH
+            # Scan only for the specific architecture
+            apt-ftparchive --arch $ARCH packages apt/pool/main > apt/dists/stable/main/binary-$ARCH/Packages
+            gzip -9fk apt/dists/stable/main/binary-$ARCH/Packages
+          done
+
+          # Generate Release metadata
+          apt-ftparchive release apt/dists/stable > apt/dists/stable/Release
+          
+          # Sign the repo
+          gpg --yes --clearsign -o apt/dists/stable/InRelease apt/dists/stable/Release
+          gpg --yes -abs -o apt/dists/stable/Release.gpg apt/dists/stable/Release
+
+      - name: Commit and Push
+        run: |
+          git config user.name "Atsign Robot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Update repository metadata - gha${{github.run_number}}"
+          git push origin trunk
