@@ -7,7 +7,7 @@ Maintainer: Chris Swan <chris@atsign.com>
 Installed-Size: 90672
 Provides: noports
 Depends: libc6
-Filename: docs/pool/main/noports_5.14.7_arm64.deb
+Filename: pool/main/noports_5.14.7_arm64.deb
 Size: 37582450
 MD5sum: 0ffcdd4170798c46c923050389e011d0
 SHA1: ae9fe9f70e3b9549788b4649d8eb67e855ac61c7
