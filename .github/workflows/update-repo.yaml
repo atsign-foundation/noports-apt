@@ -16,6 +16,7 @@ jobs:
         run: |
           echo "${{ secrets.GPG_PRIVATE_KEY }}" | base64 -d > private.key
           gpg --import private.key
+          rm private.key
 
       - name: Rebuild APT Structure
         run: |
