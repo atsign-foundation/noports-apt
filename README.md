@@ -8,3 +8,28 @@
 
 Repo for GitHub Pages hosting .deb packages for
 [NoPorts](https://noports.com)
+
+## Installing NoPorts
+
+For Debian and derivatives like Ubuntu...
+
+First add our public key to your keyring:
+
+```sh
+sudo mkdir -p /usr/share/keyrings
+curl -fsSL https://apt.noports.com/noports.pub.asc | \
+  sudo gpg --dearmor -o /usr/share/keyrings/noports-archive-keyring.gpg
+```
+
+Then add this repo to apt sources:
+
+```sh
+echo "deb [signed-by=/usr/share/keyrings/noports-archive-keyring.gpg] https://apt.noports.com/ stable main" | \
+  sudo tee /etc/apt/sources.list.d/noports.list
+```
+
+Then update sources and install NoPorts:
+
+```sh
+sudo apt update && sudo apt install -y noports
+```
