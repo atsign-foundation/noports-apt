@@ -17,3 +17,22 @@ Homepage: http://noports.com
 Description: Connect to any device with no external
  listening ports open
 
+Package: noports
+Architecture: amd64
+Version: 5.14.8
+Priority: optional
+Section: net
+Maintainer: Chris Swan <chris@atsign.com>
+Installed-Size: 91925
+Provides: noports
+Depends: libc6
+Filename: pool/main/noports_5.14.8_amd64.deb
+Size: 38535262
+MD5sum: 0e466589b893f60d379a795efb9538dd
+SHA1: 17d73f05bfbbdb72c286f472243c64951363f934
+SHA256: b201490b31ad50e9b29228d341a7687eab175c2263979d20be4d0d599eae6115
+SHA512: 8385e6346826b031fd83ab9c6cf272621fb09418c55a165b19ce590f01eaa68dd2345ae808373bdd1ae74354ff4b204a12daf96d78aab241b0728d74fdab323c
+Homepage: http://noports.com
+Description: Connect to any device with no external
+ listening ports open
+

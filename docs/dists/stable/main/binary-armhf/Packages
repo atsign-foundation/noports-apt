@@ -17,3 +17,22 @@ Homepage: http://noports.com
 Description: Connect to any device with no external
  listening ports open
 
+Package: noports
+Architecture: armhf
+Version: 5.14.8
+Priority: optional
+Section: net
+Maintainer: Chris Swan <chris@atsign.com>
+Installed-Size: 77512
+Provides: noports
+Depends: libc6
+Filename: pool/main/noports_5.14.8_armhf.deb
+Size: 36224830
+MD5sum: 594036fd74a0ec47cc5bd6ff199d3e29
+SHA1: 8ebf5926f5bd693f06c175deb2abbcc97be8ec35
+SHA256: 2aa031477a99809c803190254fcc99c38e6137941053846ef60a761a931abca3
+SHA512: 041d33c1d564e9b9a18011b3c7db3d78424c61899da484069c88ac8571e03f4ec8ab681748249a8b4bff38e2d1cefb47f23d348b41a3c08c55a7fdf633cbf237
+Homepage: http://noports.com
+Description: Connect to any device with no external
+ listening ports open
+
