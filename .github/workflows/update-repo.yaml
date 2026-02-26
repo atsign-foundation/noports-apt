@@ -1,12 +1,16 @@
 name: Update APT Metadata
 on:
-  push:
-    paths:
-      - 'incoming/**'
+  repository_dispatch:
+    types: [new-release]
+
+permissions: # added using https://github.com/step-security/secure-repo
+  contents: read
 
 jobs:
   rebuild-repo:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # To push metadata updates to this repo
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
@@ -17,6 +21,14 @@ jobs:
           echo "${{ secrets.GPG_PRIVATE_KEY }}" | base64 -d > private.key
           gpg --import private.key
           rm private.key
+
+      - name: Download Release Packages
+        env:
+          # Use the local, short-lived token instead of a PAT
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release download --repo atsign-foundation/noports \
+            --pattern "*.deb" --dir incoming/
 
       - name: Rebuild APT Structure
         working-directory: ./docs
