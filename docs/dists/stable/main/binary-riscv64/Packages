@@ -36,3 +36,22 @@ Homepage: http://noports.com
 Description: Connect to any device with no external
  listening ports open
 
+Package: noports
+Architecture: riscv64
+Version: 5.14.9
+Priority: optional
+Section: net
+Maintainer: Chris Swan <chris@atsign.com>
+Installed-Size: 123256
+Provides: noports
+Depends: libc6
+Filename: pool/main/noports_5.14.9_riscv64.deb
+Size: 56460520
+MD5sum: 969861eb6c7c37f9f79db5d3e21def35
+SHA1: 2bdea6c4a99d00cfd157b0f7eb71e609b812db70
+SHA256: 2e52504671a06a24991e34bced173b5d7aaf4a7aa2d0b637761e6fa71b9f27ab
+SHA512: 503b1bd58df2471f0a8e8f58aff54de88f6cef15ccfd7a1f76dac1729b93c8c13b97f040cc7c8ecf48b0ab89df5ba353ed1ab2fa8ac945ee344981d5f21d5574
+Homepage: http://noports.com
+Description: Connect to any device with no external
+ listening ports open
+
