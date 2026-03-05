@@ -13,6 +13,8 @@ Repo for GitHub Pages hosting .deb packages for
 
 For Debian and derivatives like Ubuntu...
 
+### Step by step
+
 First add our public key to your keyring:
 
 ```sh
@@ -23,6 +25,7 @@ curl -fsSL https://apt.noports.com/noports.pub.asc | \
 
 Then add this repo to apt sources:
 
+<!-- pyml disable-num-lines 2 md013-->
 ```sh
 echo "deb [signed-by=/usr/share/keyrings/noports-archive-keyring.gpg] https://apt.noports.com/ stable main" | \
   sudo tee /etc/apt/sources.list.d/noports.list
@@ -32,4 +35,11 @@ Then update sources and install NoPorts:
 
 ```sh
 sudo apt update && sudo apt install -y noports
+```
+
+### Or as a one liner
+
+<!-- pyml disable-num-lines 2 md013-->
+```sh
+sudo mkdir -p /usr/share/keyrings ; curl -fsSL https://apt.noports.com/noports.pub.asc | sudo gpg --dearmor -o /usr/share/keyrings/noports-archive-keyring.gpg ; echo "deb [signed-by=/usr/share/keyrings/noports-archive-keyring.gpg] https://apt.noports.com/ stable main" | sudo tee /etc/apt/sources.list.d/noports.list ; sudo apt update ; sudo apt install -y noports
 ```
