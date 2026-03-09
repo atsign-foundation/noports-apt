@@ -39,6 +39,19 @@ jobs:
           mkdir -p pool/main
           mv ../incoming/*.deb pool/main/ || true
 
+          # Prune old packages: Keep only the 4 most recent releases
+          echo "Pruning older releases..."
+          VERSIONS=$(ls pool/main/noports_*.deb | xargs -n1 basename | cut -d'_' -f2 | sort -u -V)
+          NUM_VERSIONS=$(echo "$VERSIONS" | wc -l)
+          if [ "$NUM_VERSIONS" -gt 4 ]; then
+            KEEP=4
+            OLD_VERSIONS=$(echo "$VERSIONS" | head -n -$KEEP)
+            for VER in $OLD_VERSIONS; do
+              echo "Removing version $VER"
+              rm pool/main/noports_${VER}_*.deb
+            done
+          fi
+
           for ARCH in "${ARCHS[@]}"; do
             mkdir -p dists/stable/main/binary-$ARCH
             # Scan only for the specific architecture
