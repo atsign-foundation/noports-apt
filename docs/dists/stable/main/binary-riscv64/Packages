@@ -1,5 +1,24 @@
 Package: noports
 Architecture: riscv64
+Version: 5.14.10
+Priority: optional
+Section: net
+Maintainer: Chris Swan <chris@atsign.com>
+Installed-Size: 123257
+Provides: noports
+Depends: libc6
+Filename: pool/main/noports_5.14.10_riscv64.deb
+Size: 56462826
+MD5sum: a5e9058af379abf148644573b9dc46af
+SHA1: 936f51a5c9c736749c0ecbddc60b969bfb82d9a1
+SHA256: abb083b8f0c15f99024a9ad10b1da092bc5126a2dff5a52c3ded717ea51c8b47
+SHA512: e9975d7763d684949a4099ad857a1c48406bae430e03f0778a7b65ae1ff78fded1734887c6bebe135734a9585d0053715e9781e369e0de6a050e52f6754ec9d8
+Homepage: http://noports.com
+Description: Connect to any device with no external
+ listening ports open
+
+Package: noports
+Architecture: riscv64
 Version: 5.14.7
 Priority: optional
 Section: net

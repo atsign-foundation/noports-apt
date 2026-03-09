@@ -1,5 +1,24 @@
 Package: noports
 Architecture: armhf
+Version: 5.14.10
+Priority: optional
+Section: net
+Maintainer: Chris Swan <chris@atsign.com>
+Installed-Size: 86286
+Provides: noports
+Depends: libc6
+Filename: pool/main/noports_5.14.10_armhf.deb
+Size: 40314710
+MD5sum: 49556f0191493488852acd8eb1310043
+SHA1: 224f7253e33654052b37eb0160d91eb836d66a12
+SHA256: 17a1e0c0eee21a1db061dfaa0c40bc1260a5a230d84f9e02e05c3dd48b9951ad
+SHA512: 9443e3b355f0cd10decd87f0b228a33a18a2f253acc9f01a3b8a2cd2b3ba741bcbefa3b5ed3f193b411030a3c2252c6d66768d2894d223e6c638155f46b49c81
+Homepage: http://noports.com
+Description: Connect to any device with no external
+ listening ports open
+
+Package: noports
+Architecture: armhf
 Version: 5.14.7
 Priority: optional
 Section: net
