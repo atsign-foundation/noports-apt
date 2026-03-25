@@ -38,19 +38,19 @@ Description: Connect to any device with no external
 
 Package: noports
 Architecture: arm64
-Version: 5.14.8
+Version: 5.14.13
 Priority: optional
 Section: net
 Maintainer: Chris Swan <chris@atsign.com>
-Installed-Size: 90672
+Installed-Size: 110988
 Provides: noports
 Depends: libc6
-Filename: pool/main/noports_5.14.8_arm64.deb
-Size: 37582566
-MD5sum: 2fed93ba67fe4f1f0cc2b750b78fae8a
-SHA1: d6d81679bcaa424a439c1af4f52e2a42fc702cb7
-SHA256: 4091e34e796d57c3ff3c0177a72f9d7b8d78789478ca6dcca1987e4c17ea61fa
-SHA512: e477dcad46ae25e4363393a6f66d052063daea90b90eeea261312d85fdd5f92164ad3f17aa98c74061f785759a1e0f061269e3957b115dc44bf07d1143f1f5f0
+Filename: pool/main/noports_5.14.13_arm64.deb
+Size: 45985330
+MD5sum: 8f3536e0e12eafebb8006abcbb63037d
+SHA1: e355c5a549e5f6dfd141bd960d0db19824bd12a3
+SHA256: 3409b4b475976825dcd4ea0d001ae1ffeb8fc02fd7ae7685b3823a1bee9a6ee7
+SHA512: 35d462481f538a9cb97dbe180f3194f8da678f4a7ae71ea90d38e99f0bfcf8c49d66be6b1033e55f4ea13d9eea4a4699ccc6eafd91ac4050bb8ffab81c953bea
 Homepage: http://noports.com
 Description: Connect to any device with no external
  listening ports open
