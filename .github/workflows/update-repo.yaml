@@ -33,8 +33,11 @@ jobs:
       - name: Rebuild APT Structure
         working-directory: ./docs
         run: |
-          # Define architectures you support
-          ARCHS=("amd64" "armhf" "arm64" "riscv64")
+          # Define supported architectures
+          # NB i386 is a 'shadow' arch with no actual packages.
+          # Needed to avoid notifications from systems that
+          # support i386 and amd64.
+          ARCHS=("amd64" "armhf" "arm64" "riscv64" "i386")
           
           mkdir -p pool/main
           mv ../incoming/*.deb pool/main/ || true
