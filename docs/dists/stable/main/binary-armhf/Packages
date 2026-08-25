@@ -1,24 +1,5 @@
 Package: noports
 Architecture: armhf
-Version: 5.14.11
-Priority: optional
-Section: net
-Maintainer: Chris Swan <chris@atsign.com>
-Installed-Size: 86286
-Provides: noports
-Depends: libc6
-Filename: pool/main/noports_5.14.11_armhf.deb
-Size: 40314744
-MD5sum: bd53975821e9b5b6a17c667eaf373113
-SHA1: 00fd560e037e8d1bfa65758a53b209513dc11ef8
-SHA256: 2a51c417edb7780a711568fd84457793e57d7d0460abf21ac23928797bc7b693
-SHA512: 1cae76ef10d9ba5902d38d01a454b28a65a221020ec4947aef1cb6b1e1eb0c0695a6a18edf9bfc6ba5b980c8bc4936ea2690d5f759b2d773665bbeb3f245c9af
-Homepage: http://noports.com
-Description: Connect to any device with no external
- listening ports open
-
-Package: noports
-Architecture: armhf
 Version: 5.14.13
 Priority: optional
 Section: net
@@ -70,6 +51,25 @@ MD5sum: 65bad615f56cc9604fe4210e788e1ff2
 SHA1: bf60dbf3132c6ebef3ba5cb97166cebc500096a3
 SHA256: 3c21a2d00a5e8e5130c208c2a4a878ce6f8d1e4613c954c3edef2dbf10d7a986
 SHA512: 0841f10532a10a52ac619c57fdabae2ca4d711bb5824f1ff76dcecbf4e58e0001a52a5f1c481f761ca306ea72308d4bb2cea21129d17492104ed6a1ca52f10cf
+Homepage: http://noports.com
+Description: Connect to any device with no external
+ listening ports open
+
+Package: noports
+Architecture: armhf
+Version: 5.15.2
+Priority: optional
+Section: net
+Maintainer: Chris Swan <chris@atsign.com>
+Installed-Size: 94721
+Provides: noports
+Depends: libc6
+Filename: pool/main/noports_5.15.2_armhf.deb
+Size: 43813098
+MD5sum: b3f948eece5ccb14cea5cd7bd8d00579
+SHA1: d6228ef0e8c76cf82d91a0b697f759be83d12bbf
+SHA256: 71575ab5ab9be6dc3005ac299998a1696ca2044fe1bdb5723af2c720d07c3bc3
+SHA512: 85c389a7feb405345fe25f634940cd2e9e9c10e3db0b02fdb74fbc9b8b3db27a376c2e07135eab244c1413044be1af33862f91a764cedfa8de539dd21459ce31
 Homepage: http://noports.com
 Description: Connect to any device with no external
  listening ports open
