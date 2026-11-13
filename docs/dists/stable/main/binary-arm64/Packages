@@ -1,24 +1,5 @@
 Package: noports
 Architecture: arm64
-Version: 5.15.0
-Priority: optional
-Section: net
-Maintainer: Chris Swan <chris@atsign.com>
-Installed-Size: 112292
-Provides: noports
-Depends: libc6
-Filename: pool/main/noports_5.15.0_arm64.deb
-Size: 46577618
-MD5sum: 9d346585a76a8e599c2a7d53892efce8
-SHA1: 49512be2b0197133739a14b190e25d15d707af20
-SHA256: 78e3e2d6031b5a35e0d49f600e35e9a9a9b5d043d4aee8c4689c45311c49882d
-SHA512: 3c9a53cc06ba7bebecc71acd6afa7108ddb73fb4eb76ccdd9c39204d1bfd4c26a7fb123b104f65e15cede076faf324914dd2c2bf47c76d28faab7df3857c57d1
-Homepage: http://noports.com
-Description: Connect to any device with no external
- listening ports open
-
-Package: noports
-Architecture: arm64
 Version: 5.15.1
 Priority: optional
 Section: net
@@ -70,6 +51,25 @@ MD5sum: d3e28bd6f21c9773384ff3e0b13590d9
 SHA1: 7dccafe5c67152101511286ad88152b305751117
 SHA256: b605b5c878135832461457723e47c09e9639a7bc95f573ca2ef70a0d9b9572eb
 SHA512: dad15284b55b10cd27ebda2d15230c38ea615ef7c28a77bda732cd6c3956de7ee9f53df6289ff43e9069d5af11a6faf6ecb92aa87c75f334516e22b8c29a1dbd
+Homepage: http://noports.com
+Description: Connect to any device with no external
+ listening ports open
+
+Package: noports
+Architecture: arm64
+Version: 5.18.2
+Priority: optional
+Section: net
+Maintainer: Chris Swan <chris@atsign.com>
+Installed-Size: 128809
+Provides: noports
+Depends: libc6
+Filename: pool/main/noports_5.18.2_arm64.deb
+Size: 53363010
+MD5sum: a638eb5102fc67c2da846f18d13ff8c4
+SHA1: 973080ef6a9d485b37019c25392543a5e84ef388
+SHA256: f1e101cb88fcc675456ec98487c8b1bdfaa8c1d3d0a39563a25135ca13c4c690
+SHA512: 210330577a24d5020c47a70d0306310cc40fd9cb553e42ad5506a8301148d3976a485cca981afa70af899266b75a295e2feabb88a1678055710b9fb3eed04fdc
 Homepage: http://noports.com
 Description: Connect to any device with no external
  listening ports open

@@ -1,24 +1,5 @@
 Package: noports
 Architecture: amd64
-Version: 5.15.0
-Priority: optional
-Section: net
-Maintainer: Chris Swan <chris@atsign.com>
-Installed-Size: 113929
-Provides: noports
-Depends: libc6
-Filename: pool/main/noports_5.15.0_amd64.deb
-Size: 47719146
-MD5sum: f39dfc8725ad96686cec90a24603d1a1
-SHA1: e6b8382fa175bf8a1b84c4b3d3e5f16d981df9b6
-SHA256: 5847833114b55959cc978e3422d9eb5e39305c6e15ff3818707e2dd0ac0762f7
-SHA512: f2c54852e381b434241919cbcb2f29bd2b434fdd4b23f2382b9aecfa8a09e6caa68e779da6d8ed00f2cacfbff8cb441ef0b1d9ecafa3df1adf5a0382d0ec12a2
-Homepage: http://noports.com
-Description: Connect to any device with no external
- listening ports open
-
-Package: noports
-Architecture: amd64
 Version: 5.15.1
 Priority: optional
 Section: net
@@ -70,6 +51,25 @@ MD5sum: 9ea8eb4b9c21dad1090bf0aecb587999
 SHA1: 3169f845e69550206fbf40fcdcbbd04630bcbb8d
 SHA256: 7a3933fcb173b9a5136dbf73dc3b2869635877d493e1b5701503dff7c3d428d8
 SHA512: bf4acd63240d107fdeabd3d3613fc5c2afd7253bcdfff52c99154ccc5c9ec85c45f4269cb1f0d1d0c531d409dce34b1c25153083867f16edbfba8a1fee81a22e
+Homepage: http://noports.com
+Description: Connect to any device with no external
+ listening ports open
+
+Package: noports
+Architecture: amd64
+Version: 5.18.2
+Priority: optional
+Section: net
+Maintainer: Chris Swan <chris@atsign.com>
+Installed-Size: 132050
+Provides: noports
+Depends: libc6
+Filename: pool/main/noports_5.18.2_amd64.deb
+Size: 54286784
+MD5sum: ada9d0d7ffbe96aca61139c2646fe36f
+SHA1: ff89eb46240c14ca8079b914879d94320cc6fc42
+SHA256: 2412514f6f7532ddd43ba6370b49be84b8256393b7472c1f50da962b1985f18a
+SHA512: d0498aaacc6a054a70c69581964338dd2454e694084912a6390d68f953089836447d4807b463a7fb6ad55357d987a3cd1c61918f5ba2b98312a06136ed54c2e5
 Homepage: http://noports.com
 Description: Connect to any device with no external
  listening ports open
